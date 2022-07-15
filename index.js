@@ -8,10 +8,11 @@ function delay(time) {
 const a= require('./scraper')
 const run=require('./privat24')
 const startForward =require('./forward')
-const storage = require('node-sessionstorage');
-const bot =  new Telegraf(process.env.BOT_TOKEN)
+const storage = require('node-sessionstorage')
+const bot =  new Telegraf('5509147073:AAEXS6sGMno2PHshp8n4X0mFrQPpjHEuAtI')
 
         bot.on('text', async (ctx) => {
+            console.log(ctx.from.first_name, ctx.chat.id)
             await ctx.replyWithMarkdown(`Жди чорт на *${ctx.from.first_name}*...`)
             run.start();
             startForward.startForward()
@@ -34,6 +35,7 @@ const bot =  new Telegraf(process.env.BOT_TOKEN)
             } catch (e) {
                 ctx.reply('Ошибка')
             }
+
 
         })
 
