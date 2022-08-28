@@ -34,7 +34,7 @@ const bot =  new Telegraf('5509147073:AAEXS6sGMno2PHshp8n4X0mFrQPpjHEuAtI')
 Заработок касса Raiffeisen *${a.crop(storage.getItem('incomeRaiffeisen')-expenses, 2, 'floor')}* UAH (*${a.relDiff(expenses, storage.getItem('incomeRaiffeisen') ).slice(0,5)}%*)      
             \nКурс Privat: *${storage.getItem('coursePrivat24')}* UAH
 Курс Forward: *${storage.getItem('courseForward')}* UAH
-Курс касса Raiffeisen : *${storage.getItem('courseRaiffeisen')}* UAH
+Курс касса Raiffeisen: *${storage.getItem('courseRaiffeisen')}* UAH
             `
                 await ctx.replyWithMarkdown(formatData)
             } catch (e) {
