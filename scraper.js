@@ -11,20 +11,19 @@ function relDiff(a, b) {
 }
 require('./privat24');
 require('./forward')
+require('./raiffeisen')
 const storage = require("node-sessionstorage");
 
 
 
 function runscrape(){
-
-
-
+    const incomeRaiffeisen =storage.getItem('courseRaiffeisen')*1000
     const income24 = storage.getItem('coursePrivat24')*1000
     const incomeForward =storage.getItem('courseForward')*1000
     const income1 =crop(income24, 2, 'floor')
     storage.setItem('income24', income1);
     storage.setItem('incomeForward', incomeForward)
-
+    storage.setItem('incomeRaiffeisen', incomeRaiffeisen)
     }
 
 module.exports.relDiff= relDiff;
