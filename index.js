@@ -11,6 +11,8 @@ const startForward =require('./forward')
 const startRaifffeisen=require('./raiffeisen')
 const storage = require('node-sessionstorage')
 const bot =  new Telegraf('5509147073:AAEXS6sGMno2PHshp8n4X0mFrQPpjHEuAtI')
+const incomeTempo = 40876;
+
 
         bot.on('text', async (ctx) => {
             console.log(ctx.from.first_name, ctx.chat.id)
@@ -32,6 +34,7 @@ const bot =  new Telegraf('5509147073:AAEXS6sGMno2PHshp8n4X0mFrQPpjHEuAtI')
 \nЗаработок Privat *${a.crop(storage.getItem('income24')-expenses, 2, 'floor')}* UAH (*${a.relDiff(expenses, storage.getItem('income24') ).slice(0,5)}%*)
 Заработок Forward *${a.crop(storage.getItem('incomeForward')-expenses, 2, 'floor')}* UAH (*${a.relDiff(expenses, storage.getItem('incomeForward') ).slice(0,5)}%*)
 Заработок касса Raiffeisen *${a.crop(storage.getItem('incomeRaiffeisen')-expenses, 2, 'floor')}* UAH (*${a.relDiff(expenses, storage.getItem('incomeRaiffeisen') ).slice(0,5)}%*)      
+Заработок Tempo *${a.crop(incomeTempo-expenses, 2, 'floor')}* UAH (*${a.relDiff(expenses, incomeTempo ).slice(0,5)}%*)            
             \nКурс Privat: *${storage.getItem('coursePrivat24')}* UAH
 Курс Forward: *${storage.getItem('courseForward')}* UAH
 Курс касса Raiffeisen: *${storage.getItem('courseRaiffeisen')}* UAH
