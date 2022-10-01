@@ -34,7 +34,7 @@ const bot =  new Telegraf('5509147073:AAEXS6sGMno2PHshp8n4X0mFrQPpjHEuAtI')
 \nЗаработок касса Privat *${a.crop(storage.getItem('income24')-expenses, 2, 'floor')}* UAH (*${a.relDiff(expenses, storage.getItem('income24') ).slice(0,5)}%*)
 Заработок касса Raiffeisen *${a.crop(storage.getItem('incomeRaiffeisen')-expenses, 2, 'floor')}* UAH (*${a.relDiff(expenses, storage.getItem('incomeRaiffeisen') ).slice(0,5)}%*)                  
 Заработок касса Oshad *${a.crop(storage.getItem('incomeOshad')-expenses, 2, 'floor')}* UAH (*${a.relDiff(expenses, storage.getItem('incomeOshad') ).slice(0,5)}%*)                             
-            \nКурс Privat: *${storage.getItem('coursePrivat24')}* UAH
+            \nКурс касса Privat: *${storage.getItem('coursePrivat24')}* UAH
 Курс касса Raiffeisen: *${storage.getItem('courseRaiffeisen')}* UAH
 Курс касса Oshad: *${storage.getItem('courseOshad')}* UAH
             `
