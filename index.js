@@ -18,7 +18,7 @@ const bot =  new Telegraf('5509147073:AAEXS6sGMno2PHshp8n4X0mFrQPpjHEuAtI')
             console.log(ctx.from.first_name, ctx.chat.id)
             await ctx.replyWithMarkdown(`Жди чорт на *${ctx.from.first_name}*...`)
             run.start();
-            startForward.startForward()
+            //startForward.startForward()
             await startRaifffeisenOshad.startRaiffeisenOshad()
             await delay(6000);
             a.run();
