@@ -12,7 +12,13 @@ async function run() {
     })
     await page.waitForTimeout(500);
     storage.setItem('courseRaiffeisen', courseRaiffeisen );
+    await page.goto('https://kurs.com.ua/bank/88-oshchadbank');
+    const courseOshad = await page.$$eval('#organization_table_cash > table > tbody > tr:nth-child(2) > td:nth-child(3) > div', courses => {
+        return courses.map(anchor => anchor.textContent.substr(0,6).trim())
+    })
     await browser.close();
+    storage.setItem('courseOshad', courseOshad );
     console.log('Курс Raiffeisen: '+courseRaiffeisen)
+    console.log('Курс Oshad: '+courseOshad)
 }
-module.exports.startRaiffeisen=run
+module.exports.startRaiffeisenOshad=run

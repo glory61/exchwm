@@ -1,6 +1,6 @@
 const https = require('https')
 const storage = require("node-sessionstorage");
-const url = "https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11";
+const url = "https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=5";
 
 function start()
 {https.get(url, res => {
