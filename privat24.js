@@ -10,7 +10,7 @@ function start()
     });
     res.on('end', () => {
         data = JSON.parse(data);
-        const coursePrivat24=(data[0].buy)
+        const coursePrivat24=(data[1].buy)
         storage.setItem('coursePrivat24', coursePrivat24);
         console.log('Курс Privat: '+coursePrivat24);
     })}

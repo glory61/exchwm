@@ -42,8 +42,6 @@ const bot =  new Telegraf('5509147073:AAEXS6sGMno2PHshp8n4X0mFrQPpjHEuAtI')
             } catch (e) {
                 ctx.reply('Ошибка')
             }
-
-
         })
 
 
